@@ -1,0 +1,17 @@
+<div class="app-container">
+  <h1>Custom Snackbar Demo</h1>
+  
+  <div class="button-group">
+    <button (click)="showSuccessSnackbar()">Show Success</button>
+    <button (click)="showErrorSnackbar()">Show Error</button>
+    <button (click)="showInfoSnackbar()">Show Info</button>
+    <button (click)="showWarningSnackbar()">Show Warning</button>
+    <button (click)="showSnackbarWithAction()">Show With Action</button>
+  </div>
+  
+  <!-- Your application content goes here -->
+  
+  <!-- This component will be rendered at the bottom of the screen due to its positioning -->
+  <app-snackbar (action)="handleSnackbarAction()"></app-snackbar>
+</div>
+<app-navbar></app-navbar>

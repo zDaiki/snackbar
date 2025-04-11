@@ -1,0 +1,105 @@
+:host {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  top: 5%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.snackbar {
+  min-width: 300px;
+  max-width: 500px;
+  border-radius: 4px;
+  padding: 0;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+
+  // Types styling
+  &.success {
+    background-color: #4caf50;
+    .snackbar-icon {
+      background-color: #388e3c;
+    }
+  }
+
+  &.error {
+    background-color: #f44336;
+    .snackbar-icon {
+      background-color: #d32f2f;
+    }
+  }
+
+  &.info {
+    background-color: #2196f3;
+    .snackbar-icon {
+      background-color: #1976d2;
+    }
+  }
+
+  &.warning {
+    background-color: #ff9800;
+    .snackbar-icon {
+      background-color: #f57c00;
+    }
+  }
+
+  .snackbar-content {
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+
+  .snackbar-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      fill: white;
+    }
+  }
+
+  .message {
+    flex: 1;
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+
+  .action-button {
+    border: none;
+    background: transparent;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 14px 16px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  .close-button {
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .close-icon {
+      width: 20px;
+      height: 20px;
+      fill: white;
+    }
+  }
+}
